@@ -8,8 +8,6 @@ function moduleResolvePlugin({ app, root }) {
       return next();
     }
 
-    console.log("解析vue");
-
     const id = ctx.path.replace(reg, "");
     ctx.type = "js"; // 返回的是js
 
@@ -23,7 +21,6 @@ function moduleResolvePlugin({ app, root }) {
     };
 
     const content = await fs.readFile(mapping[id], "utf8");
-
     ctx.body = content;
   });
 }

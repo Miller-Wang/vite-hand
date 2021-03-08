@@ -26,8 +26,6 @@ function createServer() {
   return app;
 }
 
-console.log("vite server2");
-
 createServer().listen(4000, () => {
   console.log("vite start 4000");
 });
